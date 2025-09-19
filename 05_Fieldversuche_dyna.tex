@@ -1,0 +1,680 @@
+\chapter{Full-Scale Field Investigation at Niederfinow}
+\label{chap:field_investigation}
+
+
+This chapter documents a comprehensive full-scale field investigation carried out at the Niederfinow ship lift. The objective was to characterise the installation process and the tensile performance of driven steel H-piles under site-specific subsoil conditions, and to identify the causes of the pronounced capacity scatter observed during testing.
+The experimental programme combined detailed monitoring during the installation process with static tensile load tests featuring high-resolution, distributed strain measurements along the entire pile shaft.
+
+Dynamic sensors deployed during installation--including strain gauges, a triaxial accelerometer near the pile head, and a near-field geophone array--were used to document the driving energy and monitor local ground disturbance. While these dynamic data provide a valuable record of the installation history, the static load tests and the distributed fibre-optic measurements form the core dataset for interpretation and diagnosis. The dynamic data are therefore reported in a supporting role, given their limited diagnostic value for resolving layer-scale stratigraphy in this particular configuration.
+
+This chapter presents the complete field investigation, beginning with a characterisation of the test site and its complex subsoil conditions. It then details the pile installation procedure, the multi-sensor instrumentation, the dynamic monitoring during installation, and the static load testing protocol. The chapter concludes with a presentation and detailed analysis of the key experimental results, which identify the governing physical mechanisms responsible for the observed pile performance.
+
+\section{introduction and objectives}
+This investigation was designed to address the unexpectedly low tensile capacities measured on nominally identical driven H-piles at the Niederfinow site and to provide the high-quality field data required to validate the numerical predictions presented in Chapter~\ref{chap:Class-A}. The specific objectives of the field programme were:
+\begin{enumerate}
+	\item To establish a high-fidelity record of the installation process for each test pile, including the vibratory and subsequent impact driving phases.
+	\item To monitor the pile and the surrounding ground during installation using a suite of dynamic sensors, providing a detailed record of the installation energy and response.
+	\item To precisely quantify the axial load distribution and mobilised skin friction along the pile shaft during static tensile tests using distributed fibre-optic sensing (FOS).
+	\item To explain the observed variation in pile capacity by identifying the governing physical mechanisms, thereby defining the critical phenomena that the numerical models in subsequent chapters must either capture or acknowledge as limitations.
+\end{enumerate}
+The signal acquisition and processing protocols applied to the dynamic measurement channels are described in Appendix~\ref{app:signal_processing} and are summarised where necessary within this chapter.
+
+\section{experimental program and site conditions}
+Three steel H-piles (HP~320~$\times$~88.5) were installed at the test site using a combined procedure. Each pile was first driven with an ICE~24RF vibratory hammer and subsequently seated to its final embedment level with an IHC~S70 hydraulic impact hammer. All piles were instrumented during installation with a pair of electrical strain gauges near the head, a triaxial accelerometer mounted on the web, and a near-field geophone array. During the subsequent force-controlled static tensile tests, axial strains along the full embedment length were measured using fibre-optic cables bonded to one of the pile's flanges.
+
+
+\section{test site and subsoil profile}\label{sec:New_field_test}
+The field tests were conducted on the northern bank of the lower forebay of the new Niederfinow ship lift in Brandenburg, Germany, approximately 60\,km northeast of Berlin. This test programme was situated adjacent to the locations of previous pile verification tests to investigate the causes of the unexpectedly poor performance observed at the site. Figure~\ref{fig:PB_Standort_CG} shows the location of the test area relative to the ship lift infrastructure.
+\begin{figure*}[!h]
+	\centering
+	\includegraphics[width=14cm]{images/figure-1.pdf}
+	\caption{Site plan of the Niederfinow ship lift showing test pile locations: aerial view (left) and map view (right). Blue dots indicate the locations of previous pile load tests (sites 1-3), while the red dot marks the location of the new field tests.}
+	\label{fig:PB_Standort_CG}
+\end{figure*}
+
+The experimental program involved the installation and load testing of three adjacent HP 320~\\times~88.5 steel piles (grade S355), spaced approximately 8\,m apart. The piles were installed between February 28 and March 1, 2022, by \textsc{Johann Bunte Bauunternehmung GmbH \& Co. KG}. To allow for potential soil set-up effects to develop, the static tensile load tests were performed five weeks later, between April 5 and April 7, 2022, by \textsc{Impuls--Pfahlmessung GmbH (IPM)} in accordance with German standards \parencite{din1054, EAP.2012}. The geometrical and mechanical properties of the H-pile profile are detailed in Table~\ref{tab:pile_properties}. 
+
+
+To characterise the local ground conditions, a borehole and a cone penetration test were performed between the piles prior to installation. The investigations revealed a highly stratified subsoil profile comprising approximately 23 distinct layers of sand, silt, and peat. The profile generally consists of a surface fill layer, underlain by a thick peat deposit extending to 6.0\,m depth, followed by uniform fine and coarse sand layers down to 12.0\,m. The groundwater table was measured at a depth of 5.5\,m. The zone between 12.0\,m and 17.3\,m, which contains multiple, thinly interlayered strata of fine sand and silt, was of particular interest. This complex layering was identified as a key geotechnical challenge, expected to significantly influence the pile's load-transfer mechanisms and potentially contribute to installation difficulties. Throughout the campaign, from installation to load testing, verticality was controlled using a pile driving guide, and the pile response was monitored with extensive instrumentation, as detailed in subsequent sections.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Geometrical and mechanical properties of the HP 320~\\times~88.5 steel pile profile, with corresponding cross-sectional dimensions shown in the schematic.}
+	\label{tab:pile_properties}
+	\begin{minipage}[c]{0.6\textwidth}
+		\centering
+		\begin{tabular}{ll}
+			\toprule
+			Steel profile                     & HP 320~\\times~88.5              \\
+			Steel grade                       & S355                       \\
+			\cmidrule(lr){1-2}
+			Density $\rho$                    & 7.87\,t/m$^3$              \\
+			Young's Modulus $E$               & 210\,GPa                   \\
+			Poisson's ratio $\nu$             & 0.3                        \\
+			\cmidrule(lr){1-2}
+			Profile height $h$                & 303\,mm                    \\
+			Profile Width $b$                 & 304\,mm                    \\
+			Flange thickness $t_{\mathrm{f}}$ & 12\,mm                     \\
+			Web thickness $t_{\mathrm{w}}$    & 12\,mm                     \\
+			Cross-section $A$                 & 11270\,mm$^2$              \\
+			Moment of inertia $I_x$ (strong)  & 56.34 $\cdot 10^6$\,mm$^4$ \\
+			Moment of inertia $I_y$ (weak)    & 18.70 $\cdot 10^6$\,mm$^4$ \\
+			\bottomrule
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}[c]{0.25\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{images/IdealisierteBohle(b).pdf}
+	\end{minipage}
+\end{table}
+
+
+\section{pile installation}
+\label{sec:pile_installation}
+
+
+\todo[inline]{Summarise the Rammbarkeit assessment from the Osthoff presentation once the driveability data are available. % DATA_NEEDED: site-specific driveability chart}
+
+The following subsections summarise the pile properties and the installation equipment used on site.
+
+
+\subsection{pile types, dimensions, and materials}
+All tests were performed with hot-rolled steel H-piles HP~320~$\times$~88.5 (S355).
+Table~\ref{tab:pile_properties} lists the relevant geometric and mechanical properties; the idealised cross-section is shown alongside for reference.
+Each pile was cut to a total length sufficient to reach the planned toe level and to accommodate the test setup above ground.
+Surface preparation was limited to local grinding at instrumentation locations; no coating was applied.
+
+
+\subsection{installation procedure and piling equipment}
+
+A combined installation method was employed for the HP 320~\\times~88.5 test piles, comprising initial vibratory driving (VD) followed by final impact driving (ID) to the target embedment depth. This two-stage approach is a common practice for achieving target embedment in dense granular deposits, as it helps to ensure full shaft contact and soil densification for mobilising shaft friction while limiting the risk of local overstressing near the head and reducing the number of high-energy blows compared to full ID. The method is common for steel H-piles in granular deposits where impact assistance is permissible and is supported by practice indicating it improves final bearing capacity, particularly base resistance \parencite{Kempfert.2018, Mazurkiewicz.1986, OCADIJ2002}.
+
+The on-site installation procedure, documented in Figure~\ref{fig:Bauablauf}, was executed as follows: each pile was lifted into a vertical position by a crane and temporarily braced. The vibratory hammer was then used to lift the pile into its final target position. To ensure verticality during the initial penetration, a custom guide frame attached to an excavator was used to laterally support the pile near the ground surface. The pile was then vibrated to a depth of 6.0\,m. After repeating this for all three piles, the vibratory hammer was replaced with a hydraulic impact hammer, and each pile was impact-driven for the final 12.3\,m to its target embedment depth of 18.3\,m.
+
+%\begin{figure}[ptb!]
+%	\begin{center}
+	%		\subfloat[]{\label{fig:Bauablauf_1}%
+		%			\includegraphics[scale=0.047]{bilder/Messkampagne/Bauablauf1.png}}
+	%		\hspace*{1cm}
+	%		\subfloat[]{\label{fig:Bauablauf_2}%
+		%			\includegraphics[scale=0.047]{bilder/Messkampagne/Bauablauf2.png}}
+	%		
+	%		\subfloat[]{\label{fig:Bauablauf_3}%
+		%			\includegraphics[scale=0.047]{bilder/Messkampagne/Bauablauf3.png}}
+	%		\hspace*{1cm}
+	%		\subfloat[]{\label{fig:Bauablauf_4}%
+		%			\includegraphics[scale=0.047]{bilder/Messkampagne/Bauablauf4.png}}
+	%		
+	%		\subfloat[]{\label{fig:Bauablauf_5}%
+		%			\includegraphics[scale=0.047]{bilder/Messkampagne/Bauablauf5.png}}
+	%		\hspace*{1cm}
+	%		\subfloat[]{\label{fig:Bauablauf_6}%
+		%			\includegraphics[scale=0.047]{bilder/Messkampagne/Bauablauf6.png}}
+	%		\caption[Photographic documentation of the pile installation process]{Photographic documentation of the pile installation process, showing (a-b) lifting and positioning, (c-d) guidance and vibratory driving, and (e-f) final impact driving.}
+	%		\label{fig:Bauablauf}
+	%	\end{center}
+%\end{figure}
+
+The piling equipment consisted of an ICE 24RF vibratory hammer for VD and an IHC S70 hydraulic hammer for ID.
+The main specifications of the hammers are listed in Table~\ref{tab:Kenndaten_Vibrationshammer} and Table~\ref{tab:Kenndaten_Schlaghammer}.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Technical specifications of the ICE 24RF vibratory hammer.}
+	\label{tab:Kenndaten_Vibrationshammer}
+	\begin{minipage}[c]{0.45\textwidth}
+		\centering
+		\begin{tabular}{@{}llc@{}}
+			\toprule
+			\textbf{Parameter}     & \textbf{Unit}         & \textbf{Value} \\
+			\midrule
+			Max. Centrifugal Force & kN     & 1400           \\
+			Eccentric Moment       & kg\,m & 0--24          \\
+			Max. Frequency         & Hz           & 38.3           \\
+			Max. Extraction Force  & kN     & 400            \\
+			Weight (without clamp) & kg       & 3500           \\
+			Dynamic Weight         & kg       & 5960           \\
+			\bottomrule
+		\end{tabular}
+	\end{minipage}
+	\hspace{0.5cm}
+	\begin{minipage}[c]{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{bilder/Messkampagne/Vibrationshammer.JPG}
+	\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Technical specifications of the IHC S~70 hydraulic impact hammer.}
+	\label{tab:Kenndaten_Schlaghammer}
+	\begin{minipage}[c]{0.45\textwidth}
+		\centering
+		\begin{tabular}{@{}llc@{}}
+			\toprule
+			\textbf{Parameter} & \textbf{Unit} & \textbf{Value} \\
+			\midrule
+			Length (without guide) & m           & 7.13     \\
+			Weight (without access.)    & t           & 8.3      \\
+			Ram Weight (piston) & t           & 3.5      \\
+			Impact Energy     & kN\,m         & 70       \\
+			Max. Blow Rate        & $\frac{\text{blows}}{\text{min}}$ & 50       \\    
+			\bottomrule
+		\end{tabular}
+	\end{minipage}
+	\hspace{0.5cm}
+	\begin{minipage}[c]{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{bilder/Messkampagne/Hydrohammer.JPG}
+	\end{minipage}
+\end{table}
+\section{instrumentation and measurement systems}
+
+To investigate the pile's load-transfer mechanisms and the soil's response, a multi-sensor instrumentation concept was implemented.
+The fibre-optic system provided distributed axial strain along the pile during the static load tests.
+During installation, discrete electrical strain gauges, a triaxial accelerometer near the pile head, and a near-field geophone array were used to monitor the input history and local ground disturbance.
+Appendix~\ref{app:signal_processing} describes the signal acquisition, filtering and spectral analysis applied to the dynamic channels. While these sensors provide high-fidelity blow timing and relative input energy (and can flag brief bending episodes near the head), their localized or near-head nature cannot resolve the distributed axial-force profile or bending along the embedded length. A detailed, continuous view of the soil-structure interaction is obtained from the fibre-optic measurements under static loading, which constitute the core diagnostic dataset in this chapter.
+
+\subsection{distributed strain measurement with fibre-optic sensors}
+\label{subsec:fos_measurement}
+
+High-resolution fibre-optic sensing (FOS) served as the core diagnostic tool during the static load tests.
+Two fibre-optic cables were bonded to one flange of each pile, providing centimetre-scale resolution of the axial strain distribution along the embedment length.
+
+\subsubsection{sensing principle and application}
+
+Fibre-optic sensors (FOS) are optical waveguides, typically made of glass, through which optical signals are transmitted and their properties measured \parencite{weisbrich2021}. They can be configured for discrete, distributed, or quasi-continuous measurements \parencite{Kunzel.2016}. The sensing principle relies on measuring changes in the properties of the transmitted light-such as wavelength, phase, intensity, or polarisation-caused by external physical stimuli. Techniques like interferometry, backscattering analysis, or frequency selection are used to quantify these changes and correlate them to the desired physical quantities \parencite{Kunzel.2016}.
+The underlying sensing mechanisms involve different types of light scattering within the fibre, as illustrated in Figure~\ref{fig:scattering_intensity}. These include Raman scattering, which is caused by thermally induced molecular vibrations and is primarily sensitive to temperature, and Brillouin scattering, which results from the interaction between light waves and acoustic phonons in the fibre and is sensitive to both mechanical strain and temperature. A third type, Rayleigh scattering, arises from microscopic density and compositional fluctuations that are ``frozen'' into the glass during the fibre manufacturing process. Importantly, Rayleigh scattering is an elastic process, meaning the scattered light retains the same wavelength and frequency as the incident light \parencite{Kunzel.2016}. This characteristic enables high spatial resolution in distributed sensing systems, particularly in coherent optical frequency domain reflectometry (c-OFDR).
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[scale=0.5]{bilder/Messkampagne/Streuintensität.eps}
+	\caption[Rayleigh, Raman and Brillouin scattering intensities in a fibre.]{Rayleigh, Raman, and Brillouin scattering intensities in a fibre, adapted from \textcite{Kunzel.2016}.}
+	\label{fig:scattering_intensity}
+\end{figure}
+
+This investigation employed a c-OFDR interrogation unit that exploits Rayleigh scattering \parencite{eickhoff1981,nakayama1987,weisbrich2021}.
+As sketched in Figure~\ref{fig:c_ofdr_principle}, the Mach-Zehnder interferometer splits the laser output into a reference arm and a measurement arm that travels through the sensor fibre.
+Backscattered light from the fibre interferes with the reference signal, producing a composite signal whose frequency content reflects the position of each scattering point.
+A Fast Fourier Transform (FFT) converts this signal into a spatial backscatter profile with centimetre-scale resolution \parencite{Kunzel.2016}.
+
+
+
+\todo[inline]{Replace this illustration with an English, vectorised version once available. % DATA_NEEDED: high-resolution c-OFDR schematic}
+
+\todo[inline]{Add field photographs of the fibre installation from the BAW presentation once usage rights are clarified. % DATA_NEEDED: image files and permissions}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[scale=0.95]{bilder/Messkampagne/c_OFDR.pdf}
+	\caption[Principle of the c-OFDR method.]{Principle of the c-OFDR method. Left: Measurement setup. Top right: Interference sum signal. Bottom right: Spectrum of the sum signal, adapted from \textcite{Kunzel.2016}.}
+	\label{fig:c_ofdr_principle}
+\end{figure}
+
+The c-OFDR system resolves strain with a spatial sampling of 1\,cm over sensing lengths of up to 70\,m, thereby producing a quasi-continuous strain profile along the pile.
+Strain is inferred from the shift in the fibre's Rayleigh backscatter signature.
+First, a reference spectrum is recorded in the unloaded state.
+When the pile is loaded, axial deformation stretches or compresses the fibre, which shifts the local backscatter spectrum.
+Cross-correlation of the loaded and reference spectra yields the wavelength shift for each segment (Figure~\ref{fig:Faseroptik_Dehnung}).
+The shift $\Delta \lambda$ relates to the mechanical strain $\varepsilon$ and any concurrent temperature change $\Delta T$ through Eq.~\ref{eq:deltalamda}, with $K_\varepsilon$ and $K_{\mathrm{T}}$ denoting the strain and temperature sensitivities of the fibre \parencite{Kunzel.2016}.
+
+\begin{equation}
+	\Delta \lambda=K_\varepsilon \cdot \varepsilon + K_{\mathrm{T}} \cdot \Delta T
+	\label{eq:deltalamda}
+\end{equation}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=8.8cm]{images/figure-4.eps}
+	\caption{Strain determination using c-OFDR. The fibre signal is segmented (top), and strain is calculated from the spectral shift of the Rayleigh backscatter profile between reference and loaded states (bottom), adapted from \textcite{Kunzel.2016}.}
+	\label{fig:Faseroptik_Dehnung}
+\end{figure}
+
+Fibre-optic sensing provides key advantages for geotechnical monitoring, including immunity to electromagnetic interference, high resistance to aggressive environments, and the ability to deliver high-resolution distributed measurements. However, the technology also presents challenges, such as the high cost of readout units, the fragility of the glass fibres, and the large data volumes that require robust processing \parencite{Weisbrich.2021}. Consequently, its application in civil engineering is often reserved for high-value projects or those with scientific oversight, such as the monitoring of the Semmering Base Tunnel \parencite{Schuller.2014}.
+
+\subsubsection{calibration and data acquisition protocol}
+
+Prior to field deployment, the fibre-optic sensors were calibrated in a controlled laboratory environment. The sensors were subjected to various load cycles, ensuring the strain did not exceed 1\,\% to prevent damage. The recorded spectral shifts were then compared with precise strain measurements from the calibration system. Temperature influences were minimised by conducting repeated measurements at comparable ambient conditions and by focusing interpretation on differential strain fields between load steps. Given that the sensors were embedded vertically in the ground, where temperature remains nearly constant, thermal effects were considered negligible during the pile tests. The integrity of the attached fibre-optic sensors was verified in the field while the piles were horizontally supported, ensuring no pre-existing bending strain. 
+
+During the pile load tests, measurements for each load stage were referenced against a pre-load measurement. The resulting changes in pile strain were derived from the spectral shift and plotted for all piles in microstrain units (1 $\mu \varepsilon$ = 10$^{-6}$ m/m) against the depth below the ground surface. At each load stage, measurements were taken at the beginning and end of the holding period. For extended holding periods, intermediate measurements were typically conducted every 30\,minutes.
+
+\subsubsection{sensor installation and data acquisition}
+
+Two fibre-optic sensing cables (Solifos FIMT CST-0.86/0.56, with a nominal diameter of 1\,mm) were installed on one flange of each test pile. To protect the sensors from the harsh installation environment, grooves measuring 2\,mm deep by 2\,mm wide were milled into the outer face of the flange. The fibres were placed within these grooves and affixed with a two-component epoxy (Figure~\ref{fig:Bohle_mit_fiber_Applikation}). The groove depth and adhesive thickness were minimised to limit any composite action. Data was recorded using a LUNA OBR 4600 interrogator, and the application and subsequent evaluation of the strain data were performed by \textsc{Sensical}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=1.3]{images/figure-3_1.eps}
+	\hspace{1.5cm}
+	\includegraphics[scale=1.3]{images/figure-3_2.eps}
+	\caption{Instrumentation of the steel pile: (left) fibre-optic sensing cable embedded within a milled groove prior to being sealed with adhesive, and (right) cross-section showing the final positions of the two sensor cables (dimensions in millimetres).}
+	\label{fig:Bohle_mit_fiber_Applikation}
+\end{figure}
+
+To safeguard the integrity of the delicate glass fibres, no measurements were taken during the pile driving phase. The extreme stresses and shock loads generated by the hydraulic hammer, particularly at the pile head where the fibres terminate, posed an unacceptably high risk of sensor damage. This concern was validated by the damage sustained by the more robust accelerometer instrumentation during installation. The accelerometer and strain-gauge instrumentation near the head provided the necessary installation context without exposing the fibres to these destructive forces.
+
+\subsection{monitoring of the installation process (dynamic measurements)}
+\label{sec:dynamic_installation_intro}
+
+
+\todo[inline]{Add photographs of the individual sensor installations once image rights are cleared. % DATA_NEEDED: approved sensor photographs}
+
+
+
+The installation phase was monitored using a suite of dynamic sensors, including electrical strain gauges near the head, a triaxial accelerometer, and a surface geophone array.
+The aim was to document the blow-by-blow energy input and the near-field ground response, and to support quality control of the installation sequence. Signal acquisition, spectral analysis, offset correction, and low-pass filtering for these channels are detailed in Appendix~\ref{app:signal_processing}.
+
+Beyond the distributed fibre-optic measurements used during the static tests, these dynamic channels provide timing and intensity information for individual blows. They are referenced here to contextualise the subsequent static interpretation and to verify the consistency of the installation history across the three test piles.
+
+\subsubsection{Electrical strain gauges (DMS)}
+\label{sec:DMS_dynamic}
+
+Each pile was instrumented with two weldable, hermetically sealed foil gauges arranged on opposite flanges and wired in quarter/half-bridge configuration near the head (approximately 2.5\,m below the pile head). These sensors captured local axial strain fluctuations induced by blows and the overall compressive stress state near the head during driving.
+
+Processing followed the workflow of Appendix~\ref{app:signal_processing}: removal of offsets (baseline over a fixed pre-event window), high-pass filtering at 1\,Hz if required, and low-pass filtering with a cut-off chosen from the FFT of each channel to retain the physically relevant part of the pulse. Given the uncertainty of the exact stress distribution in the head and the influence of local bending, the DMS channels are interpreted as indicators of relative pulse amplitude rather than absolute force. Preliminary analysis showed that while blow-resolved axial pulses scaled with hammer energy, changes at stratigraphic transitions were muted. Therefore, the DMS data were used qualitatively for ranking input energy and for indicating transient bending episodes, rather than as a primary tool for stratigraphic delineation during driving.
+
+\subsubsection{Head accelerometer (triaxial)}
+\label{sec:accel}
+
+The dynamic response of each pile was monitored with a triaxial IEPE-accelerometer (Model DJB AT/14/TB) bolted to the web near the head. The sensor has a nominal sensitivity of 2.5\,mV/g and a usable frequency range up to 5\,kHz. The accelerometers had a measurement range of $\pm2000g$, selected to withstand the anticipated high-impact loads. During the final impact driving stage, the sensors recorded extremely high-magnitude, transient accelerations in the axial direction, with peaks approaching $10,000\,\text{m/s}^2$ (approximately $1000g$). These values reflect the intense, impulse-like forces generated by the hydraulic hammer.
+
+Processing involved offset correction, verification of sensor health (saturation checks), and low-pass filtering with a cut-off selected from the FFT (Appendix~\ref{app:signal_processing}). Acceleration envelopes served as a master timing signal.
+Axial responses $a_z$ reproduce blow timing and energy steps with high fidelity. Lateral channels $a_x,a_y$ exhibit intermittent clipping and, in one case, early failure, indicating that local lateral accelerations at the head exceeded the effective measurement window. Where not saturated, lateral bursts correlate primarily with head-zone dynamics (alignment/rebound) rather than with stratigraphy. We therefore use accelerometers to establish timing and relative input and to corroborate brief lateral disturbance episodes, but not to infer layer-scale changes.
+
+\subsubsection{Surface geophone array}
+\label{sec:geophones}
+
+A linear array of six triaxial geophones (Model HGS HL-6B 3C) was placed in the near field to monitor ground particle velocity at the surface. The geophones have a natural frequency of 4.5\,Hz and a nominal sensitivity of 28.8\,V/(m/s). They were arranged in a linear chain extending away from each pile's location, at distances of 2, 3, 5, 10, 20, and 30 meters. These data captured the spatial footprint of the blows and the attenuation with distance, and supported checks on installation consistency between piles.
+
+The geophone channels were converted from voltage to velocity, corrected for sensor orientation, and band-limited using cut-offs determined from the spectral content (Appendix~\ref{app:signal_processing}).
+
+The array coherently resolved blow-to-blow variations and energy steps and facilitated a qualitative comparison across piles.
+As expected for this geometry and distance, the records served primarily as an independent energy/coupling check rather than as a stratigraphic indicator.
+
+\subsubsection{Cross-Sensor Synchronization, time bases, and data management}
+\label{sec:sync_depthtime}
+All dynamic channels are synchronised to the accelerometer envelope (master clock) and mapped to embedment by aligning the blow index with the depth log from the hammer/field records.
+For each blow $b$, within a fixed post-peak window $[t_b,\,t_b+\Delta t]$, summary metrics (peak, integral, rise time) were extracted consistently across sensors.
+
+
+
+\subsubsection{Implications and Role Within the Chapter}
+\label{sec:dynamic_implications}
+
+Axial accelerometers provided a reliable master clock and a measure of relative blow intensity; strain gauges and geophones confirmed local coupling and near-field disturbance around the head. These dynamic measurements were used for installation quality assurance and for normalising input history across piles. They did not show stable, layer-diagnostic patterns in this configuration and are therefore not used to delineate stratigraphy. The high-frequency, transient nature of impact-driving signals, combined with complex wave reflections in a highly stratified profile, prevented the reliable extraction of layer-specific impedance contrasts from near-head measurements. Processing details that underpin this conclusion are documented in Appendix~\ref{app:signal_processing}.
+
+
+The measurements taken focus in particular on the installation of the piles. The same sensors are attached to all three piles and the same measurements are therefore taken. For the subsequent tensile test load, only fibre-optic strain measurements are taken. The measurement campaign is summarised in Table~\ref{tab:measurement_campaign_summary}.
+%Table~\ref{tab:app:sensor_overview} lists the sensor types, measured quantities, typical accuracy ranges, and the processing steps applied prior to interpretation.
+%
+%\begin{table}[h!]
+%	\centering
+%	\caption{Sensor overview, measurement targets, and processing steps.}
+%	\label{tab:app:sensor_overview}
+%	\begin{tabular}{p{3.1cm} p{4.2cm} p{3.2cm} p{5.6cm}}
+	%		\hline
+	%		\textbf{Sensor} & \textbf{Measured quantity / intent} & \textbf{Nominal accuracy} & \textbf{Key processing before interpretation} \\
+	%		\hline
+	%		Fibre-optic strain (c-OFDR) & Axial strain along flanges; detection of load distribution and curvature & spatial step $\mathcal{O}$(mm) & Gauge-length average along depth, curvature from opposite flanges \\[0.2em]
+	%		Electrical strain gauges (DMS, half/full-bridge) & Local axial strain near head; relative pulse amplitude & $\pm$\,tens of $\mu\varepsilon$ & Baseline offset removal, high-pass 1\,Hz (if needed), low-pass (cut-off from FFT; see App.~\ref{app:signal_processing}) \\[0.2em]
+	%		Accelerometers (triaxial) & Head acceleration; impulse characterisation; master timing & sensor dependent & Offset/saturation check, low-pass (cut-off from FFT; see App.~\ref{app:signal_processing}) \\[0.2em]
+	%		Geophones (vertical + horizontal) & Ground particle velocity in near field & sensor dependent (typ.~$\pm$3\%) & Sensitivity conversion (V to m/s), band-limiting with cut-offs from spectral content (App.~\ref{app:signal_processing}) \\
+	%		\hline
+	%	\end{tabular}
+%\end{table}
+
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\caption[Overview of the measurement campaign at Niederfinow]{Overview of the measurements performed during the field campaign at Niederfinow. Abbreviations: VD for Vibratory Driving, ID for Impact Driving.}
+	\label{tab:measurement_campaign_summary}
+	\begin{tabular}{p{3.0cm} p{3.2cm} p{2.0cm} p{4.0cm} p{0.6cm}}
+		\hline
+		\textbf{Sensor} & \textbf{Designation} & \textbf{Process} & \textbf{Measurement location} & \textbf{Pile} \\
+		\hline
+		Strain Gauges & DMS~1, DMS~2 & VD + ID & Outer flange; Inner flange & 1 \\
+		Accelerometer & ACC-I-X/Y/Z & VD + ID & Web (near head) & 1 \\
+		Geophones & G1--G6 (H1, H2, V3) & VD + ID & Array in ground & 1 \\
+		\hline
+		Strain Gauges & DMS~3, DMS~4 & VD + ID & Outer flange; Inner flange & 2 \\
+		Accelerometer & ACC-II-X/Y/Z & VD + ID & Web (near head) & 2 \\
+		Geophones & G1--G6 (H1, H2, V3) & VD + ID & Array in ground & 2 \\
+		\hline
+		Strain Gauges & DMS~5, DMS~6 & VD + ID & Outer flange; Inner flange & 3 \\
+		Accelerometer & ACC-III-X/Y/Z & VD + ID & Web (near head) & 3 \\
+		Geophones & G1--G6 (H1, H2, V3) & VD + ID & Array in ground & 3 \\
+		\hline
+		Fibre-optic strain & Fibre~1--6 & \begin{tabular}[c]{@{}c@{}} Load Test\end{tabular} & Outer flange & \begin{tabular}[c]{@{}c@{}}1\\ 2\\ 3\end{tabular} \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{bilder/Messkampagne/Whole_MEsseinsatz_arrangment.pdf}
+	\caption{Schematic of the instrumentation layout, showing the positions of electrical strain gauges (DMS) on the flanges, fibre-optic cables in milled grooves, the triaxial accelerometer on the pile web, and the surface geophone array.}
+	\label{fig:app:inst_layout}
+\end{figure}
+
+
+
+
+\section{static load testing programme}
+\label{subsec:Static_pile_load_testing}
+
+\subsection{test setup and loading protocol}
+
+The static tensile load tests were performed using a force-controlled approach, where the load was applied incrementally and the resulting pile head displacement was measured. A schematic of the test setup is shown in Figure~\ref{fig:Sensoranordnung_PB}. A hydraulic jack, with a maximum capacity of 3\,MN and a piston stroke of 200\,mm, was used to apply the tensile load. The applied force was measured directly by a calibrated load cell positioned between the jack and the pile. The vertical displacement (heave) of the pile head was monitored by four electrical precision dial gauges, positioned at equidistant points around the pile, with a measurement resolution of 0.01\,mm.
+
+\begin{figure}[!htb]
+	\begin{center}
+		{\includegraphics[width=12cm]{images/figure-5.eps}}
+		\caption{Schematic of the static tensile load test setup, showing the arrangement of the hydraulic jack, load cell, and displacement gauges.}
+		\label{fig:Sensoranordnung_PB}
+	\end{center}
+\end{figure}
+
+
+The loading procedure involved applying the tensile force in controlled increments. Each load step was maintained for a minimum of 20\,min, or until the displacement creep rate ($K_s$) fell below 0.1\,mm in 5\,min. The test piles were subjected to an initial loading cycle up to the characteristic service load of 400\,kN, followed by unloading and reloading up to the designated test load ($P_P$) of 600\,kN. The test was terminated if one of the following failure criteria was met: a total displacement equal to 10\,\% of the pile's equivalent diameter ($D_{eq}$), a displacement creep rate exceeding 2\,mm per logarithmic time cycle, or the successful attainment of the maximum test load.
+
+To ensure data accuracy and reliability, several quality assurance measures were implemented. All key instruments were calibrated prior to testing, and redundancy was employed for critical measurements (e.g., four dial gauges). The reliability of the instrumentation is further confirmed by the cross-validation of the fibre-optic strain data against the load cell readings, which is presented in Section~\ref{sec:results}.
+
+
+
+
+\begin{figure}[!htb]
+	\begin{center}
+		{\includegraphics[width=12cm]{images/Real_Probebelastung.jpg}}
+		\caption{Photograph of the static tensile load test arrangement on-site.}
+		\label{fig:Real_Probebelastung}
+	\end{center}
+\end{figure}
+
+
+
+
+
+\section{results and analysis}
+\label{sec:results}
+
+This section presents the results of the full-scale field investigation. It first details the global load-displacement response of the three test piles and then analyses the distributed strain measurements to interpret the observed load-transfer mechanisms.
+
+\subsection{global load-displacement response}
+\label{subsec:global_load_displacement}
+
+The force-controlled tensile tests revealed a broad spread in ultimate capacity despite the nominally identical installation procedure.
+Figure~\ref{fig:Probebelastung_2025} shows the resistance--heave curves: Pile~1 mobilised 617\,kN, Pile~3 reached 500\,kN, and Pile~2 failed prematurely at 325\,kN.
+Because of the early failure, Pile~2 could not be subjected to the unload--reload cycle applied to Piles~1 and~3 (Figure~\ref{fig:Probebelastung_laststufen}).
+
+All three piles underperformed relative to the pre-test analytical and numerical predictions, with the discrepancy most pronounced for Pile~2.
+Understanding the mechanisms behind this divergence--and in particular the role of installation-induced imperfections--is the focus of the distributed strain analysis presented below and the numerical investigations in Chapter~\ref{chap:Class-A}.
+
+\begin{figure}[!h]
+	\centering
+	\subfloat[]{\includegraphics[scale=1]{D:/Publikationen/2025-07-Diss/Matlab/ExpPfahlprobebelastung/Diagramm_Laststufen_Probepfahl.pdf}
+		\label{fig:Probebelastung_laststufen}}
+	\hspace{0.5cm}
+	\subfloat[]{\includegraphics[scale=1]{D:/Publikationen/2025-07-Diss/Matlab/ExpPfahlprobebelastung/Probebelastung_Exp_Plot_All.pdf}
+		\label{fig:Probebelastung_2025_plot}}
+	\caption{Results of the static tensile load tests: (a) applied load steps versus time for the three piles, and (b) measured resistance-heave curves for Piles~1, 2, and~3.}
+	\label{fig:Probebelastung_2025}
+\end{figure}
+
+
+
+\subsection{dynamic installation records}
+\label{sec:dynamic_monitoring_results}
+
+\todo[inline]{Insert stills of the high-speed camera setup if image rights allow. % DATA_NEEDED: approved installation photographs}
+
+Dynamic monitoring during impact driving provided the time base for the installation history.
+Penetration per blow was derived from a Dewetron high-speed camera (\texttt{DS CAM 600}, 600\,fps) filming a graduated scale on the pile; the images were calibrated with a known reference length and synchronised with the accelerometer clock.
+Figures~\ref{fig:ID_P1_dynamic}--\ref{fig:ID_P3_dynamic} compile the processed records for each pile, combining axial head strain (DMS), near-field vertical ground velocity, and penetration per blow as functions of embedment.
+Reference depths at 8.80, 10.00, 12.00, and 17.30\,m are marked for orientation.
+
+Trends in signal amplitude and penetration per blow provide qualitative cues on the encountered strata.
+Between 12 and 17\,m, the complex alternation of fines and sands manifests as simultaneous increases in penetration per blow and in the amplitude of the dynamic channels, consistent with the reduced resistance documented in the subsurface profile.
+
+Pile~3 was driven first at a constant hammer energy; its responses increase smoothly with depth.
+For Piles~1 and~2 the hammer energy was stepped up at 10.00\,m to overcome anticipated resistance, which caused a sharp increase in the amplitudes of the DMS and geophone signals and a temporary rise in penetration rate.
+As the piles approached 17\,m the penetration per blow decreased rapidly, signalling entry into the dense lower strata and the onset of driving refusal.
+The final metre was not captured on video because the ram guide obscured the scale.
+
+Pile~2 exhibits a notable anomaly between 15 and 17\,m: penetration per blow increases while the DMS and geophone amplitudes drop by roughly 30\,\%.
+The combination points to impaired hammer-pile coupling or a local loss of contact, possibly caused by geometric misalignment or ground disturbance, and it correlates with the larger bending observed during the static test.
+
+The DMS pulses are therefore interpreted as relative indicators rather than absolute forces.
+They document periods of atypical excitation, confirm deliberate changes in driving parameters, and help normalise the installation history across the three piles, but layer-scale stratigraphy must be inferred from the fibre-optic data gathered during the static tests.
+
+
+
+\begin{figure*}[!ht]
+	\centering
+	\savestack{\mainplot}{%
+		\includegraphics[scale=1]{D:/Publikationen/2023-8-dal-c&G-Class-A/Matlab/03_Schlagrammung_Auswertung/00_Plots/Combined_Analysis_Pile_1.pdf}%
+	}%
+	% Centered inset at the top
+	\stackinset{c}{0pt}{t}{-0.11\textwidth}{%
+		\includegraphics[scale=1]{D:/Publikationen/2023-8-dal-c&G-Class-A/Matlab/03_Schlagrammung_Auswertung/00_Plots/Combined_Analysis_Soil_Profile.pdf}%
+	}{\mainplot}%
+	\caption{Pile~1: Dynamic installation records synchronised to embedment depth and time. Top: stratigraphic profile. Main panel: (i) axial strain near the head (DMS~2), (ii) vertical ground particle velocity from the nearest geophone (G1-V3), and (iii) penetration per blow derived from video analysis. Vertical dashed lines indicate reference depths of 8.80, 10.00, 12.00, and 17.30\,m. The sharp increase in DMS and geophone amplitudes near 10.00\,m reflects the deliberate energy step and encounter with coarser sand strata. Penetration per blow increases accordingly, with a pronounced decrease marking final refusal beyond 17\,m.}
+	\label{fig:ID_P1_dynamic}
+\end{figure*}
+
+\begin{figure*}[!ht]
+	\centering
+	\savestack{\mainplot}{%
+		\includegraphics[scale=1]{D:/Publikationen/2023-8-dal-c&G-Class-A/Matlab/03_Schlagrammung_Auswertung/00_Plots/Combined_Analysis_Pile_2.pdf}%
+	}%
+	% Centered inset at the top
+	\stackinset{c}{0pt}{t}{-0.11\textwidth}{%
+		\includegraphics[scale=1]{D:/Publikationen/2023-8-dal-c&G-Class-A/Matlab/03_Schlagrammung_Auswertung/00_Plots/Combined_Analysis_Soil_Profile.pdf}%
+	}{\mainplot}%
+	\caption{Pile~2: Dynamic installation records as in Figure~\ref{fig:ID_P1_dynamic}. The amplitudes of both head strain (DMS~4) and geophone velocity increase sharply at~10.00\,m, coinciding with the higher hammer energy and denser sand. Notable here is the erratic blow-to-blow variability, with intermittent drops in signal and periods of paradoxically higher penetration per blow (e.g., after~15\,m) accompanied by lower dynamic amplitudes. This irregularity points to inconsistent hammer-pile interaction and local soil or installation effects. The last metre of driving was not captured on video due to the ram guide obscuring the view.}
+	\label{fig:ID_P2_dynamic}
+\end{figure*}
+
+\begin{figure*}[!ht]
+	\centering
+	\savestack{\mainplot}{%
+		\includegraphics[scale=1]{D:/Publikationen/2023-8-dal-c&G-Class-A/Matlab/03_Schlagrammung_Auswertung/00_Plots/Combined_Analysis_Pile_3.pdf}%
+	}%
+	% Centered inset at the top
+	\stackinset{c}{0pt}{t}{-0.11\textwidth}{%
+		\includegraphics[scale=1]{D:/Publikationen/2023-8-dal-c&G-Class-A/Matlab/03_Schlagrammung_Auswertung/00_Plots/Combined_Analysis_Soil_Profile.pdf}%
+	}{\mainplot}%
+	\caption{Pile~3: Dynamic installation records, as for Figures~\ref{fig:ID_P1_dynamic}--\ref{fig:ID_P2_dynamic}, at a constant hammer energy setting. All signal traces (DMS~6, geophone, penetration per blow) evolve smoothly with depth, reflecting the steady advance through stratified soils without operational energy steps. Penetration per blow remains low and variable after~10\,m, consistent with hard driving and near-refusal in the lower profile.}
+	\label{fig:ID_P3_dynamic}
+\end{figure*}
+
+
+
+
+\subsection{fibre-optic strain measurements and axial force distribution}
+\label{subsec:FO_static}
+
+The fibre-optic measurements provide a detailed profile of the load transfer along the piles. Assuming linear elastic behaviour, the axial force, $F(z)$, at any depth $z$ is directly proportional to the measured mean strain, $\varepsilon(z)$, via the relationship $F(z) = EA \varepsilon(z)$, where $EA$ is the pile's axial stiffness. The local gradient of these profiles, $dF/dz$, represents the mobilised skin friction; a steeper gradient indicates more rapid load transfer to the soil (i.e., higher skin friction), while a near-vertical profile signifies negligible load transfer. In principle, with increasing load, there is an increasing strain, and accordingly, the most significant strains correspond to the load-bearing capacity.
+
+Figure~\ref{fig:Faser123} presents the strain profiles recorded for Piles~1, 2, and~3 at various load increments. The strain values, in microstrain, are plotted against the depth below ground level. The data are shown for each of the two sensors and for their mean value, which is used for subsequent force calculations. The difference in the load-bearing behaviour of the three piles is clearly visible in these profiles.
+
+
+
+\begin{figure*}[!h]
+	\centering
+	\makebox[\textwidth][c]{%
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Faseroptik_9subplots_SoilProfile.pdf}
+		\hspace{2mm}
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Faseroptik_9subplots.pdf}}
+	\caption{Distributed axial strain profiles measured by the fibre-optic sensors for Pile~1 (top), Pile~2 (middle), and Pile~3 (bottom) at various load increments up to their respective ultimate capacities. Each plot shows the readings from individual sensors and their mean value.}
+	\label{fig:Faser123}
+\end{figure*}
+
+
+
+The FOS-based head forces were benchmarked against the calibrated load-cell measurements.
+Discrepancies of 4.0\,\%, 0.5\,\%, and 4.1\,\% for Piles~1--3 (Figure~\ref{fig:Krafteinleitung}, left) confirm that the distributed measurements capture the global load with sufficient accuracy for detailed interpretation.
+
+\begin{figure*}[!ht]
+	\centering
+	% Center the two images as a single block
+	\makebox[\textwidth][c]{%
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Biegung_Bodenprofil_symbol.pdf}%
+		\hspace{2mm}% gap between soil strip and main plot (tune as needed)
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Force_and_qs.pdf}%
+	}
+	\caption{Axial force distribution along the piles, derived from the mean FOS strain measurements. The close agreement between the force calculated at the pile head and the force measured by the load cell validates the FOS data.}
+	\label{fig:Krafteinleitung}
+\end{figure*}
+
+The derived unit shaft resistance profiles (Figure~\ref{fig:Krafteinleitung}, right) exhibit a clear stratigraphic contrast.
+Dense sand layers mobilise the highest resistances, whereas the peat and interbedded silts contribute only marginally to the total capacity.
+Consequently the granular horizons, where effective stress and relative density are greatest, govern the overall tensile response.
+
+\todo[inline]{Refine the layer-wise capacity breakdown once the calculations are finalised. % DATA_NEEDED: validated layer contribution table}
+
+%%this needs significant polishing but could be usefull 
+%The stratified nature of the subsoil at the Niederfinow site, with its distinct layers of sand, silt, and peat, necessitates a detailed analysis of each layer's contribution to the overall tensile capacity of the H-piles.  This layer-wise breakdown is crucial for understanding the load transfer mechanisms and for identifying the most critical layers influencing the pile's performance.
+%
+%Table~\ref{tab:LayerContribution} summarizes the calculated contribution of each major soil layer to the total tensile capacity. As anticipated, the dense sand layers (e.g., those between 6.0-12.0\,m and below 17.3\,m) are the primary contributors to the shaft friction, accounting for the majority of the mobilized resistance. These layers, characterized by higher stiffness and internal friction angles, effectively transfer the tensile load from the pile to the surrounding ground. In contrast, the organic peat layer (1.55-6.0\,m) and the thin, interlayered silt strata (12.0-17.3\,m) exhibit significantly lower contributions. The peat, with its high compressibility and low shear strength, offers minimal frictional resistance. Similarly, the thin silt layers, despite their presence, are modeled with negligible friction coefficients due to their perceived low load-bearing capacity and limited thickness, as discussed in Section 2.4.
+%
+%This differential contribution underscores the importance of accurate soil characterization and layering in numerical models. The model's ability to distinguish between the load-carrying capacities of various soil types provides valuable insights for design optimization. For instance, it highlights that efforts to enhance pile capacity should primarily focus on improving interaction within the granular layers, potentially through ground improvement techniques or by optimizing pile geometry to maximize contact with these stronger strata. Conversely, the minimal contribution from the peat and silt layers suggests that their presence may not significantly impede overall capacity, provided sufficient embedment in more competent soils is achieved. This detailed layer-wise analysis serves to validate the initial assumptions regarding soil behavior and provides a quantitative basis for interpreting the observed global load-displacement response.
+
+%\begin{table}[!htbp]
+%	\centering
+%	\caption{Calculated layer-wise contribution to the total tensile capacity.}
+%	\label{tab:LayerContribution}
+%	\begin{tabular}{lcc}
+	%		\toprule
+	%		\textbf{Soil Layer} & \textbf{Depth Range (m)} & \textbf{Contribution to Total Capacity (\%)}\\
+	%		\midrule
+	%		Surface Fill & 0.0 - 1.55 & 0.5 \\
+	%		Peat & 1.55 - 6.0 & 2.0 \\
+	%		Dense Sand & 6.0 - 12.0 & 45.0 \\
+	%		Thin Silt/Sand Interlayers & 12.0 - 17.3 & 5.0 \\
+	%		Coarse Sand & 17.3 - End of Pile & 47.5 \\
+	%		\bottomrule
+	%	\end{tabular}
+%\end{table}
+
+
+
+
+
+
+\subsection{load transfer mechanisms}
+\label{subsec:load_transfer_mechanisms}
+
+The individual FOS readings reveal that the response is not purely axial.
+At higher load levels the two sensors on each flange diverge, with tension on one side and compression on the other (Figure~\ref{fig:Faser123}).
+This signature indicates a bending moment superimposed on the axial tension.
+Given the HP profile, the weak axis--with its lower bending stiffness--is the principal axis of bending.
+The effect is most pronounced near the toe and at depths where the soil resistance changes abruptly.
+Although the two-sensor configuration cannot resolve strong-axis bending or torsion, it captures the dominant weak-axis curvature induced by installation irregularities.
+
+However, analysis of the mean strain profiles provides a clear interpretation of the primary load transfer mechanisms and explains the large variation in ultimate capacities. For Pile~2, which had the lowest capacity, significant load transfer (indicated by a rapid decrease in strain with depth) occurs mainly in the upper sand layers between 8\,m and 12\,m depth. Below this depth, the strain profile becomes nearly vertical, signifying that minimal additional skin friction was mobilised in the deeper, more competent soil layers.
+
+In contrast, Piles~1 and 3, which achieved much higher capacities, demonstrate effective load transfer into these deeper strata. Their mean strain profiles show a sustained, significant reduction in strain throughout the lower sections of the pile, with a substantial contribution to resistance coming from the final 6\,m of embedment. These data demonstrate that the differences in ultimate capacity are directly linked to how effectively each pile mobilised skin friction in the deeper soil layers. This highlights that a simple one-dimensional analysis is insufficient to capture the localised soil-structure interaction that governs performance in these complex conditions.
+
+
+
+\subsection{bending effects and installation imperfections}
+\label{subsec:bending_effects}
+
+The divergence in strain readings between the two sensors indicates that the piles were subjected to bending, even under a nominally vertical tensile load. This bending is attributed to geometric imperfections introduced during installation. If a pile is driven into the ground along a slightly curved path, the vertical tensile force applied during the load test will attempt to straighten it. This action induces a ``corrective bending'' moment within the pile, which is resisted by the surrounding soil.
+
+This bending moment can be quantified by decomposing the measured strains. The mean strain from the two sensors ($\varepsilon_1$ and $\varepsilon_2$) represents the pure axial component, while their difference is proportional to the curvature. The bending moment about the pile's weak axis, $M_y$, is calculated as:
+\begin{equation}
+	M_y = \frac{EI_y}{d_{\text{sensor}}} (\varepsilon_1 - \varepsilon_2)
+\end{equation}
+where $EI_y$ is the pile's weak-axis bending stiffness and $d_{\text{sensor}}$ is the distance between the two sensors. For H-piles, this weak-axis bending, captured by
+the two-sensor setup, is considered the dominant component under quasi-axial loads due to the pile's lower bending stiffness around this axis, even if full 3D effects are not resolved.
+
+Figure~\ref{fig:Biegung} plots the calculated bending moments for the three piles at different load stages.
+The left-hand panel corresponds to a load of 300\,kN (the maximum achieved by Pile~2), while the right-hand panel shows the response at 500\,kN (the maximum achieved by Pile~3). A clear trend emerges: Pile~2, which has the lowest tensile capacity, also records the largest bending moments, whereas Pile~1 remains close to pure axial behaviour. The peak bending moment of 19.95\,kN\,m is far below the yield threshold $M_y = \sigma_y \cdot S = 127.86\,kN\,m$, confirming that the response stayed elastic.
+
+
+\begin{figure*}[!ht]
+	\centering
+	% Center the two images as a single block
+	\makebox[\textwidth][c]{%
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Biegung_Bodenprofil_symbol.pdf}%
+		\hspace{2mm}% gap between soil strip and main plot (tune as needed)
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Biegung_Excel.pdf}%
+	}
+	\caption{Bending moments about the weak axis at load stages of 300\,kN (left) and 500\,kN (right) for the three investigated piles.}
+	\label{fig:Biegung}
+\end{figure*}
+
+
+
+Corrective bending becomes significant only once the pile begins to slip relative to the soil.
+The onset coincides with head displacement creep rates above 2\,mm per logarithmic time cycle; as the pile straightens against the confining soil, bending moments are mobilised.
+
+At the common load of 300\,kN (Figure~\ref{fig:Faseroptik_Pfahl_Belastungsast_300}) Pile~2 shows both the largest bending component and the highest creep rate ($K_{\mathrm{s}} > 10\,mm$), whereas Piles~1 and~3 remain stable ($K_{\mathrm{s}} < 0.5\,mm$).
+The rapid creep of Pile~2 therefore reflects the pile's attempt to straighten a pronounced locked-in curvature.
+
+Because the piles share the same geometry, installation method, and stratigraphy, the observed variation in capacity is best explained by differences in the magnitude and location of these installation-induced imperfections.
+
+
+
+\begin{figure*}[!ht]
+	\centering
+	% Center the two images as a single block
+	\makebox[\textwidth][c]{%
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Biegung_Bodenprofil_symbol.pdf}%
+		\hspace{2mm}% gap between soil strip and main plot (tune as needed)
+		\includegraphics[scale=1,valign=t]{D:/Publikationen/2025-07-Diss/Matlab/Faseroptik/Bilder/Faseroptik_Pfahl_Belastungsast_300.pdf}%
+	}
+	\caption{Comparison of fibre-optic strain measurements for the three piles at the 300\,kN load stage}
+	\label{fig:Faseroptik_Pfahl_Belastungsast_300}
+\end{figure*}
+
+
+
+
+% \textcolor{red}{
+	% 	This diagnosis, derived quantitatively from the FOS data, is strongly supported by the qualitative and quantitative observations made during the installation itself. The dynamic monitoring confirmed the presence of extreme, high-magnitude accelerations during impact driving, and the frequent sensor failures attest to the severity of the loading environment. Furthermore, site observations documented the repeated manual corrections to the pile's alignment by the piling master and noted that the guide frame offered a less-than-rigid constraint. This combination of a violent driving process and a guidance system allowing for minor adjustments creates precisely the conditions under which small deviations from verticality can accumulate along the pile length. The resulting subtle, locked-in curvatures are then revealed as significant "corrective bending" moments when the pile is subjected to high tensile loads, leading to the observed premature failure of skin friction and wide scatter in ultimate capacity.
+	
+	% }
+
+
+\subsection{cross-checks from dynamic monitoring during installation}
+
+The dynamic signals corroborate the installation chronology used to align the fibre-optic interpretation.
+For Piles~1 and~2, the energy increase at $\approx$10.00\,m appears as a step in the head responses and a change in the blow index trend (Figures~\ref{fig:ID_P1_dynamic} and \ref{fig:ID_P2_dynamic}).
+Pile~3 was driven at a constant setting (Figure~\ref{fig:ID_P3_dynamic}); the gradually rising blow index during final seating aligns with the higher head demands close to 17-18\,m.
+
+Irregular spikes and higher variability in the head channels of Pile~2 coincide with the pile that later exhibited the lowest tensile capacity and the largest bending signatures during static loading (Section~\ref{subsec:bending_effects}).
+This consistency supports the interpretation that installation-induced misalignment or local curvature influenced the mobilised shaft resistance. This suggests that the installation irregularities captured by the dynamic sensors are not merely transient events but are direct indicators of the process that leads to the locked-in geometric imperfections, which ultimately govern the static tensile capacity.
+No attempt is made to infer layer-scale changes in stiffness from the dynamic channels; those are resolved by the distributed fibre-optic measurements during the static tests.
+
+
+
+\subsection{implications for predictive modeling}
+\label{subsec:implications_for_modeling}
+
+The field results demonstrate that installation-induced geometric imperfections can be a dominant factor governing pile performance, capable of causing a nearly 60\,\% variation in ultimate capacity among adjacent, identically installed piles. This presents a fundamental challenge for predictive modelling. Any minor misalignment or eccentricity during the initial driving becomes more pronounced near the pile base due to the cumulative effect of small deviations along the pile length. Furthermore, the presence of thinly inter-layered soils creates heterogeneous resistance patterns that can amplify these localised bending effects.
+
+These findings have direct implications for practice and emphasise the critical importance of installation quality control in achieving designed pile capacities. To optimise performance, maintaining a consistent driving inclination is preferable to attempting corrections that might introduce harmful bending constraints. Implementation of low-impact installation methods and enhanced pile-driving guidance systems could help minimise these effects. For predictive purposes, engineers must recognise that a single deterministic analysis likely represents an idealised upper-bound capacity, and a suitable design should account for the potential of significant performance scatter due to unavoidable installation variability.
+
+\section{summary of key findings}
+\label{sec:summary_field_investigation}
+
+The full-scale campaign at Niederfinow resolves the mechanisms behind the unexpectedly low tensile capacities of the driven H-piles.
+Key observations are:
+\begin{itemize}
+	\item \textbf{Global response.} The resistance--heave curves exhibit a capacity spread from 325 to 617\,kN, demonstrating that nominally identical piles can differ by nearly 60\,\% once installation imperfections are introduced.
+	\item \textbf{Fibre-optic evidence.} Distributed strain measurements reproduce the load-cell readings at the head within 0.5--4.1\,\% and expose how each pile partitions load with depth, including the bending moments generated during pull-out.
+	\item \textbf{Dynamic context.} Strain gauges, accelerometers, geophones, and video-derived penetration records document energy input and highlight irregular episodes--notably for Pile~2--but they cannot on their own resolve layer-by-layer load transfer.
+	\item \textbf{Installation-induced bending.} Weak-axis bending correlates with reduced capacity: the pile with the lowest capacity shows the highest corrective bending moments and the fastest creep, confirming that locked-in curvature accumulated during driving governs performance.
+	\item \textbf{Stratigraphic control.} Effective mobilisation of the deeper sand layers is the differentiator between the well-performing and the underperforming piles; limited interaction with these layers leaves Pile~2 reliant on the upper sands and peat, which cannot sustain the design load.
+\end{itemize}
+
+Taken together, the measurements establish that installation-induced geometric imperfections dominate the capacity scatter at this site.
+They also underline two practical requirements: strict control of driving inclination and guidance during installation, and predictive models that explicitly account for installation variability rather than relying on a single deterministic analysis.
+The present FOS layout captures the critical weak-axis behaviour, yet a future 3D bending assessment would require additional fibres or discrete sensors on multiple flanges to resolve strong-axis bending and torsion.
+These findings frame the calibration targets for the numerical studies in Chapters~\ref{chap:Class-A} and~\ref{chap:07_Num_Hypo_FRIC}.
